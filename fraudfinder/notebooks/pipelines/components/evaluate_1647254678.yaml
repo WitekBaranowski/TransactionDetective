@@ -1,0 +1,55 @@
+name: Evaluate model
+inputs:
+- {name: model_in, type: Model}
+- {name: metrics_uri, type: String}
+outputs:
+- {name: meta_metrics, type: Metrics}
+- {name: graph_metrics, type: ClassificationMetrics}
+- {name: model_out, type: Model}
+- {name: metrics_thr, type: Float}
+implementation:
+  container:
+    image: python:3.7
+    command:
+    - sh
+    - -c
+    - (python3 -m ensurepip || python3 -m ensurepip --user) && (PIP_DISABLE_PIP_VERSION_CHECK=1
+      python3 -m pip install --quiet                 --no-warn-script-location 'kfp==1.8.2'
+      || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet                 --no-warn-script-location
+      'kfp==1.8.2' --user) && "$0" "$@"
+    - sh
+    - -ec
+    - |
+      program_path=$(mktemp -d)
+      printf "%s" "$0" > "$program_path/ephemeral_component.py"
+      python3 -m kfp.v2.components.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+    - "\nfrom kfp.v2.dsl import *\nfrom typing import *\n\ndef evaluate_model(\n \
+      \   model_in: Input[Model],\n    metrics_uri: str,\n    meta_metrics: Output[Metrics],\n\
+      \    graph_metrics: Output[ClassificationMetrics],\n    model_out: Output[Model])\
+      \ -> NamedTuple(\"Outputs\",\n                                            [(\"\
+      metrics_thr\", float),],):\n\n    # Libraries --------------------------------------------------------------------------------------------------------------------------\n\
+      \    import json\n\n    # Variables --------------------------------------------------------------------------------------------------------------------------\n\
+      \    metrics_path = metrics_uri.replace('gs://', '/gcs/')\n    labels = ['not\
+      \ fraud', 'fraud']\n\n    # Main -------------------------------------------------------------------------------------------------------------------------------\n\
+      \    with open(metrics_path, mode='r') as json_file:\n        metrics = json.load(json_file)\n\
+      \n    ## metrics\n    fpr = metrics['fpr']\n    tpr = metrics['tpr']\n    thrs\
+      \ = metrics['thrs']\n    c_matrix = metrics['confusion_matrix']\n    avg_precision_score\
+      \ = metrics['avg_precision_score']\n    f1 = metrics['f1_score']\n    lg_loss\
+      \ = metrics['log_loss']\n    prec_score = metrics['precision_score']\n    rec_score\
+      \ = metrics['recall_score']\n\n    meta_metrics.log_metric('avg_precision_score',\
+      \ avg_precision_score)\n    meta_metrics.log_metric('f1_score', f1)\n    meta_metrics.log_metric('log_loss',\
+      \ lg_loss)\n    meta_metrics.log_metric('precision_score', prec_score)\n   \
+      \ meta_metrics.log_metric('recall_score', rec_score)\n    graph_metrics.log_roc_curve(fpr,\
+      \ tpr, thrs)\n    graph_metrics.log_confusion_matrix(labels, c_matrix)\n\n \
+      \   ## model metadata\n    model_framework = 'xgb.dask'\n    model_type = 'DaskXGBClassifier'\n\
+      \    model_user = 'inardini' \n    model_function = 'classification'\n    model_out.metadata[\"\
+      framework\"] = model_framework\n    model_out.metadata[\"type\"] = model_type\n\
+      \    model_out.metadata[\"model function\"] = model_function\n    model_out.metadata[\"\
+      modified by\"] = model_user\n\n    component_outputs = NamedTuple(\"Outputs\"\
+      ,\n                                [(\"metrics_thr\", float),],)\n\n    return\
+      \ component_outputs(float(avg_precision_score))\n\n"
+    args:
+    - --executor_input
+    - {executorInput: null}
+    - --function_to_execute
+    - evaluate_model

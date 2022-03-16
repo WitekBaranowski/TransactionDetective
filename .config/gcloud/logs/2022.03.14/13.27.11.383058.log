@@ -1,0 +1,437 @@
+2022-03-14 13:27:11,384 DEBUG    root            Loaded Command Group: ['gcloud', 'artifacts']
+2022-03-14 13:27:11,386 DEBUG    root            Loaded Command Group: ['gcloud', 'artifacts', 'repositories']
+2022-03-14 13:27:11,391 DEBUG    root            Loaded Command Group: ['gcloud', 'artifacts', 'repositories', 'list']
+2022-03-14 13:27:11,397 DEBUG    root            Running [gcloud.artifacts.repositories.list] with arguments: []
+2022-03-14 13:27:11,408 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,411 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,412 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,413 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,418 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,430 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,432 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,434 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,434 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,437 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,450 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:11,489 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:11,496 INFO     ___FILE_ONLY___ Listing items under project transaction-detective22-1559, across all locations.
+
+
+2022-03-14 13:27:11,563 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,578 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,593 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,599 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,600 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,604 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,605 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,607 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,611 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,613 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,614 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,615 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,616 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,617 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,619 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,620 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,620 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,621 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,622 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,625 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,628 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,630 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,631 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,634 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,635 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,636 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,637 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,638 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,640 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,640 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,641 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,642 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,643 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,645 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,646 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,648 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,649 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,651 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,652 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,654 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,656 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,658 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,660 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,660 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,662 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,664 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,666 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,668 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,669 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,671 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,673 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,676 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,678 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,680 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,681 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,682 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,683 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,685 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,687 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,688 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,690 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,690 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,692 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,694 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,696 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,698 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,700 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,703 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,703 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,705 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,706 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,707 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,708 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,708 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,710 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,711 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,712 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,714 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,716 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,716 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,716 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,720 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,720 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,720 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,721 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,725 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,726 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,727 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,728 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,729 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,730 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,733 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,734 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,734 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,736 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,737 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,738 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,738 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,739 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,739 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,740 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:11,740 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,741 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,742 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,745 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,746 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,746 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,747 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,748 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,748 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,749 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,750 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,751 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,752 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,752 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,753 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,754 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,758 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,764 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,765 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,767 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,768 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,769 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,770 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,774 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,775 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,776 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,777 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,778 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,781 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,781 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,784 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:11,789 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,793 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,793 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,794 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,795 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,799 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,803 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,808 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,810 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,813 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,815 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,821 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,821 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,824 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,825 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,833 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,835 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,842 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,843 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,847 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,852 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,852 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,858 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,859 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,867 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,871 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,872 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:11,873 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,874 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,886 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,902 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,919 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,928 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,937 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,939 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,042 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,944 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,947 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,958 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,971 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,976 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,985 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:11,995 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,999 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,001 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,003 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,004 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,007 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,009 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,015 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,018 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,019 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,020 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,023 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,026 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,029 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,031 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,032 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,035 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,038 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:11,944 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,042 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,043 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,046 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,048 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,050 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,051 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 13:27:12,053 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,055 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,055 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,055 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,057 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,059 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,061 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,064 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,065 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,066 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,068 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,068 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,070 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,071 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,073 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,074 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,075 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,078 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,080 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,081 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,082 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,085 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,085 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,087 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,087 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,089 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,091 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,094 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,095 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 13:27:12,098 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,099 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,099 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,100 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,100 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,101 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,102 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,104 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,104 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,105 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,108 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,109 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,109 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,110 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,111 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,112 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,113 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,115 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,115 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,116 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,117 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,118 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,118 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,119 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,119 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,120 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,122 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,126 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,126 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,127 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,127 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,129 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,130 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,130 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,131 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,131 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 13:27:12,132 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,132 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,135 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,136 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,136 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,137 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,142 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,143 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,144 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,146 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,149 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,153 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,153 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,154 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,154 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,157 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,158 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,158 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,159 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,161 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,162 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,163 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,165 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,166 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,167 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,172 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,172 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,178 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 13:27:12,178 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,182 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,190 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,191 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,191 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,195 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,199 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,201 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,209 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,224 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,224 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,224 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,225 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,232 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,235 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,240 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,242 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,246 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,250 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,252 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,253 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,262 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,262 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,266 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,268 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,277 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,277 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,283 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,284 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 271
+2022-03-14 13:27:12,292 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,297 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,306 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,314 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,322 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,326 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,332 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,336 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,350 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,374 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,378 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,378 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,382 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,389 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,400 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,411 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,417 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,418 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,427 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,450 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2022-03-14 13:27:12,666 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/northamerica-northeast2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,676 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/northamerica-northeast1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,686 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,691 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-west6/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,756 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-northeast3/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,791 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-central1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,799 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-west3/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,822 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-east1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,852 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-east4/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,865 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-west4/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,907 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,924 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-west1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:12,960 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/us-west2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,017 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,158 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-west1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,163 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-west2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,189 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-west4/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,222 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-west3/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,258 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-north1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,284 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/europe-central2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,436 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-northeast1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,479 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/southamerica-east1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,502 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-northeast2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,628 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-east1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,630 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-east2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,634 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/australia-southeast2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,744 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/australia-southeast1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,841 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-southeast1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:13,896 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-southeast2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:14,110 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-south1/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:14,229 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1beta2/projects/transaction-detective22-1559/locations/asia-south2/repositories?alt=json HTTP/1.1" 200 None
+2022-03-14 13:27:14,241 INFO     root            Display format: "    table[title="ARTIFACT_REGISTRY"](
+         name.basename():label=REPOSITORY,
+         format:label=FORMAT,
+         description:label=DESCRIPTION,
+         name.segment(3):label=LOCATION,
+         labels.list():label=LABELS,
+         kmsKeyName.yesno(yes='Customer-managed key', no='Google-managed key'):label=ENCRYPTION,
+         createTime.date(tz=LOCAL),
+         updateTime.date(tz=LOCAL)
+    )"
+2022-03-14 13:27:14,243 INFO     ___FILE_ONLY___                                                                 ARTIFACT_REGISTRY
+2022-03-14 13:27:14,243 INFO     ___FILE_ONLY___ 
+
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___ REPOSITORY
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___         
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___ FORMAT
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___ DESCRIPTION
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___                            
+2022-03-14 13:27:14,244 INFO     ___FILE_ONLY___ LOCATION
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___      
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___ LABELS
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___ ENCRYPTION
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___           
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___ CREATE_TIME
+2022-03-14 13:27:14,245 INFO     ___FILE_ONLY___           
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___ UPDATE_TIME
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___ 
+
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___ fraudfinder-7551
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___ DOCKER
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___ Fraud Finder Docker Image repository
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,246 INFO     ___FILE_ONLY___ us-central1
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___           
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___ Google-managed key
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___ 2022-03-14T13:27:07
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___   
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___ 2022-03-14T13:27:07
+2022-03-14 13:27:14,247 INFO     ___FILE_ONLY___ 
+
+2022-03-14 13:27:14,247 DEBUG    root            SDK update checks are disabled.

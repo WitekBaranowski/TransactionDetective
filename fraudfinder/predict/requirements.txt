@@ -1,0 +1,11 @@
+git+https://github.com/googleapis/python-aiplatform.git
+google-api-core==2.7.0
+google-cloud-aiplatform
+google-cloud-bigquery==2.28.1
+google-cloud-pubsub==2.10.0
+google-cloud-storage==1.42.3
+gunicorn
+flask-socketio==5.1.1
+Flask==2.0.3
+pandas==1.4.1
+simple-websocket

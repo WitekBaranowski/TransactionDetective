@@ -1,0 +1,46 @@
+2022-03-14 10:28:25,709 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-03-14 10:28:25,752 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-03-14 10:28:25,776 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--allow-unauthenticated: "True", --image: "gcr.io/fraudfinderdemo/ff-server", --memory: "4G", --platform: "managed", --region: "us-central1", SERVICE: "ff-server"]
+2022-03-14 10:28:25,792 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:25,795 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:25,797 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:25,798 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:25,800 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-03-14 10:28:25,815 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:25,817 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:25,819 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:25,820 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:25,823 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-03-14 10:28:25,847 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:25,849 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:25,851 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:25,852 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:25,855 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-03-14 10:28:25,863 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:25,865 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:25,867 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:25,868 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:25,871 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-03-14 10:28:25,879 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-central1-run.googleapis.com:443
+2022-03-14 10:28:25,927 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 404 None
+2022-03-14 10:28:25,928 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mff-server[m] in project [[1mtransaction-detective22-1559[m] region [[1mus-central1[m]
+
+2022-03-14 10:28:25,930 INFO     ___FILE_ONLY___ Deploying new service...
+2022-03-14 10:28:26,114 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "POST /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:26,124 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2022-03-14 10:28:26,306 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/transaction-detective22-1559/locations/us-central1/services/ff-server:getIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:26,452 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "POST /v1/projects/transaction-detective22-1559/locations/us-central1/services/ff-server:setIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:26,494 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:27,539 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:28,585 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:29,625 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:30,669 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:31,705 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:32,745 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:32,781 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:32,894 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-server?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:32,898 INFO     ___FILE_ONLY___ Service [[1mff-server[m] revision [[1mff-server-00001-zax[m] has been deployed and is serving [1m100[m percent of traffic.
+Service URL: [1mhttps://ff-server-jmo4lejj5a-uc.a.run.app[m
+
+2022-03-14 10:28:32,899 INFO     root            Display format: "none"
+2022-03-14 10:28:32,903 DEBUG    root            SDK update checks are disabled.

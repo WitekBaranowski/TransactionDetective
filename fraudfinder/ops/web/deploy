@@ -1,0 +1,7 @@
+. init
+gcloud run deploy "$APP"  \
+    --project "$PROJ"     \
+    --image "$TAG"        \
+    --platform "managed"  \
+    --region "$REGION"    \
+    --allow-unauthenticated

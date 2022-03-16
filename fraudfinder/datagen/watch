@@ -1,0 +1,22 @@
+if [ "$1" == "batch" ] && [ "$2" == "local" ]
+then
+    watch -n 10 ls -ltr data/*
+elif [ "$1" == "batch" ] && [ "$2" == "gcs" ]
+then
+    watch -n 60 "gsutil ls -l gs://fraudfinderdemo_* | sort -k 2"
+elif [ "$1" == "batch" ] && [ "$2" == "bq" ]
+then
+    watch -n 60 ./watch_bq
+elif [ "$1" == "stream" ] && [ "$2" == "local" ]
+then
+    watch -n 10 ls -ltr data/*
+elif [ "$1" == "stream" ] && [ "$2" == "gcs" ]
+then
+    watch -n 60 "gsutil ls -l gs://fraudfinderdemo_* | sort -k 2"
+elif [ "$1" == "stream" ] && [ "$2" == "bq" ]
+then
+    watch -n 60 ./watch_bq
+elif [ "$1" == "stream" ] && [ "$2" == "ps" ]
+then
+    python3 watch_ps.py
+fi

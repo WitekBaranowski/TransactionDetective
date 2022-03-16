@@ -1,0 +1,3 @@
+PROJECT_ID=$(gcloud config get-value project)
+DOCKER_IMG="gcr.io/$PROJECT_ID/ff-datagen"
+gcloud builds submit --tag $DOCKER_IMG

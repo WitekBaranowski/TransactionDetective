@@ -1,0 +1,7 @@
+DS="demographics.customers demographics.terminals demographics.customersterminals txstaging.tx txstaging.txlabels"
+
+for i in $DS
+do
+    date=`bq show $i | awk 'NR == 5 {print $1,$2,$3}'`
+    echo $date $i
+done

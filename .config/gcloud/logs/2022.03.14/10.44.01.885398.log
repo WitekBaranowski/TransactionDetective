@@ -1,0 +1,7 @@
+2022-03-14 10:44:01,887 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2022-03-14 10:44:01,919 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2022-03-14 10:44:01,923 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "ai/region", VALUE: "us-central1"]
+2022-03-14 10:44:01,924 INFO     ___FILE_ONLY___ Updated property [ai/region].
+
+2022-03-14 10:44:01,925 INFO     root            Display format: "default"
+2022-03-14 10:44:01,926 DEBUG    root            SDK update checks are disabled.

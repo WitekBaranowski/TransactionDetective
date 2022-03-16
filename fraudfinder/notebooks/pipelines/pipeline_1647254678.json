@@ -1,0 +1,788 @@
+{
+  "pipelineSpec": {
+    "components": {
+      "comp-condition-avg-pr-condition-1": {
+        "dag": {
+          "tasks": {
+            "endpoint-create": {
+              "cachingOptions": {
+                "enableCache": true
+              },
+              "componentRef": {
+                "name": "comp-endpoint-create"
+              },
+              "inputs": {
+                "parameters": {
+                  "project": {
+                    "componentInputParameter": "pipelineparam--project_id"
+                  }
+                }
+              },
+              "taskInfo": {
+                "name": "endpoint-create"
+              }
+            },
+            "model-deploy": {
+              "cachingOptions": {
+                "enableCache": true
+              },
+              "componentRef": {
+                "name": "comp-model-deploy"
+              },
+              "dependentTasks": [
+                "endpoint-create"
+              ],
+              "inputs": {
+                "artifacts": {
+                  "endpoint": {
+                    "taskOutputArtifact": {
+                      "outputArtifactKey": "endpoint",
+                      "producerTask": "endpoint-create"
+                    }
+                  },
+                  "model": {
+                    "componentInputArtifact": "pipelineparam--customcontainertrainingjob-run-model"
+                  }
+                },
+                "parameters": {
+                  "machine_type": {
+                    "componentInputParameter": "pipelineparam--machine_type"
+                  },
+                  "project": {
+                    "componentInputParameter": "pipelineparam--project_id"
+                  }
+                }
+              },
+              "taskInfo": {
+                "name": "model-deploy"
+              }
+            }
+          }
+        },
+        "inputDefinitions": {
+          "artifacts": {
+            "pipelineparam--customcontainertrainingjob-run-model": {
+              "artifactType": {
+                "schemaTitle": "system.Model",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          },
+          "parameters": {
+            "pipelineparam--evaluate-model-metrics_thr": {
+              "type": "DOUBLE"
+            },
+            "pipelineparam--machine_type": {
+              "type": "STRING"
+            },
+            "pipelineparam--project_id": {
+              "type": "STRING"
+            },
+            "pipelineparam--thold": {
+              "type": "DOUBLE"
+            }
+          }
+        }
+      },
+      "comp-customcontainertrainingjob-run": {
+        "executorLabel": "exec-customcontainertrainingjob-run",
+        "inputDefinitions": {
+          "artifacts": {
+            "dataset": {
+              "artifactType": {
+                "schemaTitle": "system.Dataset",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          },
+          "parameters": {
+            "args": {
+              "type": "STRING"
+            },
+            "base_output_dir": {
+              "type": "STRING"
+            },
+            "location": {
+              "type": "STRING"
+            },
+            "machine_type": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            },
+            "replica_count": {
+              "type": "STRING"
+            },
+            "staging_bucket": {
+              "type": "STRING"
+            },
+            "test_fraction_split": {
+              "type": "STRING"
+            },
+            "training_fraction_split": {
+              "type": "STRING"
+            },
+            "validation_fraction_split": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "model": {
+              "artifactType": {
+                "schemaTitle": "system.Model",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          }
+        }
+      },
+      "comp-endpoint-create": {
+        "executorLabel": "exec-endpoint-create",
+        "inputDefinitions": {
+          "parameters": {
+            "project": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "endpoint": {
+              "artifactType": {
+                "schemaTitle": "system.Artifact",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          }
+        }
+      },
+      "comp-evaluate-model": {
+        "executorLabel": "exec-evaluate-model",
+        "inputDefinitions": {
+          "artifacts": {
+            "model_in": {
+              "artifactType": {
+                "schemaTitle": "system.Model",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          },
+          "parameters": {
+            "metrics_uri": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "graph_metrics": {
+              "artifactType": {
+                "schemaTitle": "system.ClassificationMetrics",
+                "schemaVersion": "0.0.1"
+              }
+            },
+            "meta_metrics": {
+              "artifactType": {
+                "schemaTitle": "system.Metrics",
+                "schemaVersion": "0.0.1"
+              }
+            },
+            "model_out": {
+              "artifactType": {
+                "schemaTitle": "system.Model",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          },
+          "parameters": {
+            "metrics_thr": {
+              "type": "DOUBLE"
+            }
+          }
+        }
+      },
+      "comp-ingest-features-gcs": {
+        "executorLabel": "exec-ingest-features-gcs",
+        "inputDefinitions": {
+          "parameters": {
+            "bucket_name": {
+              "type": "STRING"
+            },
+            "feature_store_id": {
+              "type": "STRING"
+            },
+            "project_id": {
+              "type": "STRING"
+            },
+            "read_instances_uri": {
+              "type": "STRING"
+            },
+            "region": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "parameters": {
+            "snapshot_uri_paths": {
+              "type": "STRING"
+            }
+          }
+        }
+      },
+      "comp-model-deploy": {
+        "executorLabel": "exec-model-deploy",
+        "inputDefinitions": {
+          "artifacts": {
+            "endpoint": {
+              "artifactType": {
+                "schemaTitle": "system.Artifact",
+                "schemaVersion": "0.0.1"
+              }
+            },
+            "model": {
+              "artifactType": {
+                "schemaTitle": "system.Model",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          },
+          "parameters": {
+            "machine_type": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "endpoint": {
+              "artifactType": {
+                "schemaTitle": "system.Artifact",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          }
+        }
+      },
+      "comp-tabulardataset-create": {
+        "executorLabel": "exec-tabulardataset-create",
+        "inputDefinitions": {
+          "parameters": {
+            "gcs_source": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "dataset": {
+              "artifactType": {
+                "schemaTitle": "system.Dataset",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "deploymentSpec": {
+      "executors": {
+        "exec-customcontainertrainingjob-run": {
+          "container": {
+            "args": [
+              "--init.display_name",
+              "fraudfinder-train-xgb-1647254678",
+              "--init.container_uri",
+              "us-central1-docker.pkg.dev/transaction-detective22-1559/fraudfinder-7551/dask-xgb-classificator:v1",
+              "--init.model_serving_container_image_uri",
+              "us-docker.pkg.dev/vertex-ai/prediction/xgboost-cpu.1-1:latest",
+              "--method.model_display_name",
+              "fraudfinder-xgb-7551",
+              "--executor_input",
+              "{{$}}",
+              "--resource_name_output_artifact_uri",
+              "{{$.outputs.artifacts['model'].uri}}",
+              "--init.staging_bucket",
+              "{{$.inputs.parameters['staging_bucket']}}",
+              "--method.dataset",
+              "{{$.inputs.artifacts['dataset'].uri}}",
+              "--method.base_output_dir",
+              "{{$.inputs.parameters['base_output_dir']}}",
+              "--method.args",
+              "{{$.inputs.parameters['args']}}",
+              "--method.replica_count",
+              "{{$.inputs.parameters['replica_count']}}",
+              "--method.machine_type",
+              "{{$.inputs.parameters['machine_type']}}",
+              "--method.training_fraction_split",
+              "{{$.inputs.parameters['training_fraction_split']}}",
+              "--method.validation_fraction_split",
+              "{{$.inputs.parameters['validation_fraction_split']}}",
+              "--method.test_fraction_split",
+              "{{$.inputs.parameters['test_fraction_split']}}",
+              "--init.project",
+              "{{$.inputs.parameters['project']}}",
+              "--init.location",
+              "{{$.inputs.parameters['location']}}"
+            ],
+            "command": [
+              "python3",
+              "-m",
+              "google_cloud_pipeline_components.remote.aiplatform.remote_runner",
+              "--cls_name",
+              "CustomContainerTrainingJob",
+              "--method_name",
+              "run"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:0.1.6"
+          }
+        },
+        "exec-endpoint-create": {
+          "container": {
+            "args": [
+              "--method.display_name",
+              "fraudfinder_xgb_prediction",
+              "--executor_input",
+              "{{$}}",
+              "--resource_name_output_artifact_uri",
+              "{{$.outputs.artifacts['endpoint'].uri}}",
+              "--method.project",
+              "{{$.inputs.parameters['project']}}"
+            ],
+            "command": [
+              "python3",
+              "-m",
+              "google_cloud_pipeline_components.remote.aiplatform.remote_runner",
+              "--cls_name",
+              "Endpoint",
+              "--method_name",
+              "create"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:0.1.6"
+          }
+        },
+        "exec-evaluate-model": {
+          "container": {
+            "args": [
+              "--executor_input",
+              "{{$}}",
+              "--function_to_execute",
+              "evaluate_model"
+            ],
+            "command": [
+              "sh",
+              "-c",
+              "(python3 -m ensurepip || python3 -m ensurepip --user) && (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet                 --no-warn-script-location 'kfp==1.8.2' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet                 --no-warn-script-location 'kfp==1.8.2' --user) && \"$0\" \"$@\"",
+              "sh",
+              "-ec",
+              "program_path=$(mktemp -d)\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\npython3 -m kfp.v2.components.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+              "\nfrom kfp.v2.dsl import *\nfrom typing import *\n\ndef evaluate_model(\n    model_in: Input[Model],\n    metrics_uri: str,\n    meta_metrics: Output[Metrics],\n    graph_metrics: Output[ClassificationMetrics],\n    model_out: Output[Model]) -> NamedTuple(\"Outputs\",\n                                            [(\"metrics_thr\", float),],):\n\n    # Libraries --------------------------------------------------------------------------------------------------------------------------\n    import json\n\n    # Variables --------------------------------------------------------------------------------------------------------------------------\n    metrics_path = metrics_uri.replace('gs://', '/gcs/')\n    labels = ['not fraud', 'fraud']\n\n    # Main -------------------------------------------------------------------------------------------------------------------------------\n    with open(metrics_path, mode='r') as json_file:\n        metrics = json.load(json_file)\n\n    ## metrics\n    fpr = metrics['fpr']\n    tpr = metrics['tpr']\n    thrs = metrics['thrs']\n    c_matrix = metrics['confusion_matrix']\n    avg_precision_score = metrics['avg_precision_score']\n    f1 = metrics['f1_score']\n    lg_loss = metrics['log_loss']\n    prec_score = metrics['precision_score']\n    rec_score = metrics['recall_score']\n\n    meta_metrics.log_metric('avg_precision_score', avg_precision_score)\n    meta_metrics.log_metric('f1_score', f1)\n    meta_metrics.log_metric('log_loss', lg_loss)\n    meta_metrics.log_metric('precision_score', prec_score)\n    meta_metrics.log_metric('recall_score', rec_score)\n    graph_metrics.log_roc_curve(fpr, tpr, thrs)\n    graph_metrics.log_confusion_matrix(labels, c_matrix)\n\n    ## model metadata\n    model_framework = 'xgb.dask'\n    model_type = 'DaskXGBClassifier'\n    model_user = 'inardini' \n    model_function = 'classification'\n    model_out.metadata[\"framework\"] = model_framework\n    model_out.metadata[\"type\"] = model_type\n    model_out.metadata[\"model function\"] = model_function\n    model_out.metadata[\"modified by\"] = model_user\n\n    component_outputs = NamedTuple(\"Outputs\",\n                                [(\"metrics_thr\", float),],)\n\n    return component_outputs(float(avg_precision_score))\n\n"
+            ],
+            "image": "python:3.7"
+          }
+        },
+        "exec-ingest-features-gcs": {
+          "container": {
+            "args": [
+              "--executor_input",
+              "{{$}}",
+              "--function_to_execute",
+              "ingest_features_gcs"
+            ],
+            "command": [
+              "sh",
+              "-c",
+              "(python3 -m ensurepip || python3 -m ensurepip --user) && (PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet                 --no-warn-script-location 'git+https://github.com/googleapis/python-aiplatform.git@main' 'kfp==1.8.2' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet                 --no-warn-script-location 'git+https://github.com/googleapis/python-aiplatform.git@main' 'kfp==1.8.2' --user) && \"$0\" \"$@\"",
+              "sh",
+              "-ec",
+              "program_path=$(mktemp -d)\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\npython3 -m kfp.v2.components.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+              "\nfrom kfp.v2.dsl import *\nfrom typing import *\n\ndef ingest_features_gcs(project_id:str, region:str, bucket_name:str,\n                       feature_store_id: str, read_instances_uri:str) -> NamedTuple(\"Outputs\",\n                                                                       [(\"snapshot_uri_paths\", str),],):\n\n    # Libraries --------------------------------------------------------------------------------------------------------------------------\n    from datetime import datetime\n    import glob\n    import urllib\n    import json\n\n    #Feature Store\n    from google.cloud.aiplatform import Featurestore, EntityType, Feature\n\n    # Variables --------------------------------------------------------------------------------------------------------------------------\n    timestamp = datetime.now().strftime(\"%Y%m%d%H%M%S\")\n    api_endpoint = region + \"-aiplatform.googleapis.com\"\n    bucket = urllib.parse.urlsplit(bucket_name).netloc\n    export_uri = f'{bucket_name}/data/snapshots/{timestamp}' #format as new gsfuse requires\n    export_uri_path = f'/gcs/{bucket}/data/snapshots/{timestamp}' \n    event_entity = 'event'\n    customer_entity = 'customer'\n    terminal_entity = 'terminal'\n    serving_feature_ids = {customer_entity: ['*'], event_entity: ['*'], terminal_entity: ['*']}\n\n    # Main -------------------------------------------------------------------------------------------------------------------------------\n\n    ## Set a client for Feature store managment\n\n    ### Create admin_client for create, read, update and delete (CRUD)\n    feature_store_resource_path = f\"projects/{project_id}/locations/{region}/featurestores/{feature_store_id}\"\n    print(\"Feature Store: \\t\", feature_store_resource_path)\n\n    ## Run batch job request\n    try:\n        ff_feature_store = Featurestore(feature_store_resource_path)\n        ff_feature_store.batch_serve_to_gcs(\n            gcs_destination_output_uri_prefix = export_uri,\n            gcs_destination_type = 'csv',\n            serving_feature_ids = serving_feature_ids,\n            read_instances_uri = read_instances_uri\n        )\n    except Exception as error:\n        print(error)\n\n    #Store metadata\n    snapshot_pattern = f'{export_uri_path}/*.csv'\n    snapshot_files = glob.glob(snapshot_pattern)\n    snapshot_files_fmt = [p.replace('/gcs/', 'gs://') for p in snapshot_files]\n    snapshot_files_string = json.dumps(snapshot_files_fmt)\n\n    component_outputs = NamedTuple(\"Outputs\",\n                                [(\"snapshot_uri_paths\", str),],)\n\n    return component_outputs(snapshot_files_string)\n\n"
+            ],
+            "image": "python:3.7"
+          }
+        },
+        "exec-model-deploy": {
+          "container": {
+            "args": [
+              "--method.deployed_model_display_name",
+              "fraudfinder-xgb-7551",
+              "--executor_input",
+              "{{$}}",
+              "--resource_name_output_artifact_uri",
+              "{{$.outputs.artifacts['endpoint'].uri}}",
+              "--init.model_name",
+              "{{$.inputs.artifacts['model'].uri}}",
+              "--init.project",
+              "{{$.inputs.parameters['project']}}",
+              "--method.endpoint",
+              "{{$.inputs.artifacts['endpoint'].uri}}",
+              "--method.machine_type",
+              "{{$.inputs.parameters['machine_type']}}"
+            ],
+            "command": [
+              "python3",
+              "-m",
+              "google_cloud_pipeline_components.remote.aiplatform.remote_runner",
+              "--cls_name",
+              "Model",
+              "--method_name",
+              "deploy"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:0.1.6"
+          }
+        },
+        "exec-tabulardataset-create": {
+          "container": {
+            "args": [
+              "--method.display_name",
+              "fraud_finder_dataset_2022-01-31",
+              "--executor_input",
+              "{{$}}",
+              "--resource_name_output_artifact_uri",
+              "{{$.outputs.artifacts['dataset'].uri}}",
+              "--method.project",
+              "{{$.inputs.parameters['project']}}",
+              "--method.gcs_source",
+              "{{$.inputs.parameters['gcs_source']}}"
+            ],
+            "command": [
+              "python3",
+              "-m",
+              "google_cloud_pipeline_components.remote.aiplatform.remote_runner",
+              "--cls_name",
+              "TabularDataset",
+              "--method_name",
+              "create"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:0.1.6"
+          }
+        }
+      }
+    },
+    "pipelineInfo": {
+      "name": "fraud-finder-xgb-pipeline-7551"
+    },
+    "root": {
+      "dag": {
+        "outputs": {
+          "artifacts": {
+            "evaluate-model-graph_metrics": {
+              "artifactSelectors": [
+                {
+                  "outputArtifactKey": "graph_metrics",
+                  "producerSubtask": "evaluate-model"
+                }
+              ]
+            },
+            "evaluate-model-meta_metrics": {
+              "artifactSelectors": [
+                {
+                  "outputArtifactKey": "meta_metrics",
+                  "producerSubtask": "evaluate-model"
+                }
+              ]
+            }
+          }
+        },
+        "tasks": {
+          "condition-avg-pr-condition-1": {
+            "componentRef": {
+              "name": "comp-condition-avg-pr-condition-1"
+            },
+            "dependentTasks": [
+              "customcontainertrainingjob-run",
+              "evaluate-model"
+            ],
+            "inputs": {
+              "artifacts": {
+                "pipelineparam--customcontainertrainingjob-run-model": {
+                  "taskOutputArtifact": {
+                    "outputArtifactKey": "model",
+                    "producerTask": "customcontainertrainingjob-run"
+                  }
+                }
+              },
+              "parameters": {
+                "pipelineparam--evaluate-model-metrics_thr": {
+                  "taskOutputParameter": {
+                    "outputParameterKey": "metrics_thr",
+                    "producerTask": "evaluate-model"
+                  }
+                },
+                "pipelineparam--machine_type": {
+                  "componentInputParameter": "machine_type"
+                },
+                "pipelineparam--project_id": {
+                  "componentInputParameter": "project_id"
+                },
+                "pipelineparam--thold": {
+                  "componentInputParameter": "thold"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "condition-avg-pr-condition-1"
+            },
+            "triggerPolicy": {
+              "condition": "inputs.parameters['pipelineparam--evaluate-model-metrics_thr'].double_value < inputs.parameters['pipelineparam--thold'].double_value"
+            }
+          },
+          "customcontainertrainingjob-run": {
+            "cachingOptions": {
+              "enableCache": true
+            },
+            "componentRef": {
+              "name": "comp-customcontainertrainingjob-run"
+            },
+            "dependentTasks": [
+              "tabulardataset-create"
+            ],
+            "inputs": {
+              "artifacts": {
+                "dataset": {
+                  "taskOutputArtifact": {
+                    "outputArtifactKey": "dataset",
+                    "producerTask": "tabulardataset-create"
+                  }
+                }
+              },
+              "parameters": {
+                "args": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[\"--bucket\", \"gs://transaction-detective22-1559\"]"
+                    }
+                  }
+                },
+                "base_output_dir": {
+                  "componentInputParameter": "bucket_name"
+                },
+                "location": {
+                  "componentInputParameter": "region"
+                },
+                "machine_type": {
+                  "componentInputParameter": "machine_type"
+                },
+                "project": {
+                  "componentInputParameter": "project_id"
+                },
+                "replica_count": {
+                  "componentInputParameter": "replica_count"
+                },
+                "staging_bucket": {
+                  "componentInputParameter": "bucket_name"
+                },
+                "test_fraction_split": {
+                  "componentInputParameter": "test_split"
+                },
+                "training_fraction_split": {
+                  "componentInputParameter": "train_split"
+                },
+                "validation_fraction_split": {
+                  "componentInputParameter": "val_split"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "customcontainertrainingjob-run"
+            }
+          },
+          "evaluate-model": {
+            "cachingOptions": {
+              "enableCache": true
+            },
+            "componentRef": {
+              "name": "comp-evaluate-model"
+            },
+            "dependentTasks": [
+              "customcontainertrainingjob-run"
+            ],
+            "inputs": {
+              "artifacts": {
+                "model_in": {
+                  "taskOutputArtifact": {
+                    "outputArtifactKey": "model",
+                    "producerTask": "customcontainertrainingjob-run"
+                  }
+                }
+              },
+              "parameters": {
+                "metrics_uri": {
+                  "componentInputParameter": "metrics_uri"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "evaluate-model"
+            }
+          },
+          "ingest-features-gcs": {
+            "cachingOptions": {
+              "enableCache": true
+            },
+            "componentRef": {
+              "name": "comp-ingest-features-gcs"
+            },
+            "inputs": {
+              "parameters": {
+                "bucket_name": {
+                  "componentInputParameter": "bucket_name"
+                },
+                "feature_store_id": {
+                  "componentInputParameter": "feature_store_id"
+                },
+                "project_id": {
+                  "componentInputParameter": "project_id"
+                },
+                "read_instances_uri": {
+                  "componentInputParameter": "read_instances_uri"
+                },
+                "region": {
+                  "componentInputParameter": "region"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "ingest-features-gcs"
+            }
+          },
+          "tabulardataset-create": {
+            "cachingOptions": {
+              "enableCache": true
+            },
+            "componentRef": {
+              "name": "comp-tabulardataset-create"
+            },
+            "dependentTasks": [
+              "ingest-features-gcs"
+            ],
+            "inputs": {
+              "parameters": {
+                "gcs_source": {
+                  "taskOutputParameter": {
+                    "outputParameterKey": "snapshot_uri_paths",
+                    "producerTask": "ingest-features-gcs"
+                  }
+                },
+                "project": {
+                  "componentInputParameter": "project_id"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "tabulardataset-create"
+            }
+          }
+        }
+      },
+      "inputDefinitions": {
+        "parameters": {
+          "bucket_name": {
+            "type": "STRING"
+          },
+          "feature_store_id": {
+            "type": "STRING"
+          },
+          "machine_type": {
+            "type": "STRING"
+          },
+          "metrics_uri": {
+            "type": "STRING"
+          },
+          "project_id": {
+            "type": "STRING"
+          },
+          "read_instances_uri": {
+            "type": "STRING"
+          },
+          "region": {
+            "type": "STRING"
+          },
+          "replica_count": {
+            "type": "STRING"
+          },
+          "test_split": {
+            "type": "STRING"
+          },
+          "thold": {
+            "type": "DOUBLE"
+          },
+          "train_split": {
+            "type": "STRING"
+          },
+          "val_split": {
+            "type": "STRING"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "artifacts": {
+          "evaluate-model-graph_metrics": {
+            "artifactType": {
+              "schemaTitle": "system.ClassificationMetrics",
+              "schemaVersion": "0.0.1"
+            }
+          },
+          "evaluate-model-meta_metrics": {
+            "artifactType": {
+              "schemaTitle": "system.Metrics",
+              "schemaVersion": "0.0.1"
+            }
+          }
+        }
+      }
+    },
+    "schemaVersion": "2.0.0",
+    "sdkVersion": "kfp-1.8.2"
+  },
+  "runtimeConfig": {
+    "gcsOutputDirectory": "gs://transaction-detective22-1559/pipelines",
+    "parameters": {
+      "bucket_name": {
+        "stringValue": "gs://transaction-detective22-1559"
+      },
+      "feature_store_id": {
+        "stringValue": "fraud_finder_7551"
+      },
+      "machine_type": {
+        "stringValue": "n1-standard-4"
+      },
+      "metrics_uri": {
+        "stringValue": "gs://transaction-detective22-1559/deliverables/metrics.json"
+      },
+      "project_id": {
+        "stringValue": "transaction-detective22-1559"
+      },
+      "read_instances_uri": {
+        "stringValue": "bq://transaction-detective22-1559.tx.ground_truth_1647254678"
+      },
+      "region": {
+        "stringValue": "us-central1"
+      },
+      "replica_count": {
+        "stringValue": "1"
+      },
+      "test_split": {
+        "stringValue": "0.1"
+      },
+      "thold": {
+        "doubleValue": 0.8
+      },
+      "train_split": {
+        "stringValue": "0.8"
+      },
+      "val_split": {
+        "stringValue": "0.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+PROJECT_ID=$(gcloud config get-value project)
+DOCKER_IMG="gcr.io/$PROJECT_ID/datagen"
+docker pull $DOCKER_IMG
+docker run -p 8080:8080 $DOCKER_IMG

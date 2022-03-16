@@ -1,0 +1,48 @@
+2022-03-14 10:28:15,700 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-03-14 10:28:15,743 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-03-14 10:28:15,767 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--allow-unauthenticated: "True", --image: "gcr.io/fraudfinderdemo/ff-predict", --memory: "4G", --platform: "managed", --region: "us-central1", SERVICE: "ff-predict"]
+2022-03-14 10:28:15,781 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:15,784 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:15,786 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:15,787 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:15,789 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-03-14 10:28:15,802 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:15,804 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:15,806 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:15,807 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:15,810 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-03-14 10:28:15,835 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:15,837 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:15,840 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:15,840 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:15,844 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-03-14 10:28:15,852 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:28:15,854 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:28:15,856 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:28:15,857 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:28:15,859 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-03-14 10:28:15,868 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-central1-run.googleapis.com:443
+2022-03-14 10:28:15,928 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 404 None
+2022-03-14 10:28:15,930 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mff-predict[m] in project [[1mtransaction-detective22-1559[m] region [[1mus-central1[m]
+
+2022-03-14 10:28:15,931 INFO     ___FILE_ONLY___ Deploying new service...
+2022-03-14 10:28:16,063 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "POST /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:16,072 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2022-03-14 10:28:16,207 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/transaction-detective22-1559/locations/us-central1/services/ff-predict:getIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:16,360 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "POST /v1/projects/transaction-detective22-1559/locations/us-central1/services/ff-predict:setIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:16,405 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:17,468 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:18,516 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:19,547 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:20,581 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:21,657 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:22,697 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:23,782 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:24,836 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:24,870 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:24,913 DEBUG    urllib3.connectionpool https://us-central1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/transaction-detective22-1559/services/ff-predict?alt=json HTTP/1.1" 200 None
+2022-03-14 10:28:24,917 INFO     ___FILE_ONLY___ Service [[1mff-predict[m] revision [[1mff-predict-00001-wif[m] has been deployed and is serving [1m100[m percent of traffic.
+Service URL: [1mhttps://ff-predict-jmo4lejj5a-uc.a.run.app[m
+
+2022-03-14 10:28:24,918 INFO     root            Display format: "none"
+2022-03-14 10:28:24,922 DEBUG    root            SDK update checks are disabled.

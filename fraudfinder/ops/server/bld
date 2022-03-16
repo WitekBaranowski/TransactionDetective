@@ -1,0 +1,2 @@
+. init
+gcloud builds submit --tag $TAG

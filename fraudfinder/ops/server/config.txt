@@ -1,0 +1,12 @@
+tx_per_second=1             # float: number of tx per sec
+refresh_config_cycle=5      # int: how often (in s) reload config
+dest_pubsub_topic=prod      # str: where to send generated data
+inflation_rate=0.0          # float: expansion factor applied to ?
+hack_txamount_prob=0.3      # float: ?
+hack_txamount_multiplier=5  # float: ?
+cust_tohack_perc=0.0004     # float: percent hacked customers
+term_tohack_perc=0.0001     # float: percent hacked terminals
+cust_hacked_days_mean=14    # int: mean num days customer hacked
+cust_hacked_days_std=1      # int: stddev num days customer hacked
+term_hacked_days_mean=28    # int: mean num days terminal hacked
+term_hacked_days_std=2      # int: stddev num days terminal hacked

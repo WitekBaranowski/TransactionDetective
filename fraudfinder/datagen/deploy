@@ -1,0 +1,10 @@
+export APP=ff-datagen
+export REGION=us-central1
+export DOCKER_IMG=gcr.io/fraudfinderdemo/ff-datagen
+
+gcloud run deploy "$APP"     \
+       --image "$DOCKER_IMG" \
+       --platform "managed"  \
+       --region "$REGION"    \
+       --memory 4G           \
+       --allow-unauthenticated

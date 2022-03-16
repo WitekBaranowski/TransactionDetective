@@ -1,0 +1,5 @@
+export PORT=8080
+export PROJ=`gcloud config list --format 'value(core.project)' 2>/dev/null`
+export APP=ff-predict
+export REGION=us-central1
+export TAG="gcr.io/$PROJ/$APP"

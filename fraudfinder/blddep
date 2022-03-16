@@ -1,0 +1,6 @@
+for i in datagen predict ops/server ops/web
+do
+  cd $i
+  ./bld; ./deploy
+  cd -
+done

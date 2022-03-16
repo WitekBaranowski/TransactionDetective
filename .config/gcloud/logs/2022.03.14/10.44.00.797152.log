@@ -1,0 +1,19 @@
+2022-03-14 10:44:00,799 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2022-03-14 10:44:00,830 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2022-03-14 10:44:00,833 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "project", VALUE: "transaction-detective22-1559"]
+2022-03-14 10:44:00,847 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:44:00,850 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:44:00,852 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:44:00,853 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:44:00,856 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-03-14 10:44:00,870 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true
+2022-03-14 10:44:00,872 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-03-14 10:44:00,874 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-03-14 10:44:00,874 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token
+2022-03-14 10:44:00,877 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/130114571864-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-03-14 10:44:00,892 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-03-14 10:44:00,956 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/transaction-detective22-1559?alt=json HTTP/1.1" 200 None
+2022-03-14 10:44:00,959 INFO     ___FILE_ONLY___ Updated property [core/project].
+
+2022-03-14 10:44:00,961 INFO     root            Display format: "default"
+2022-03-14 10:44:00,961 DEBUG    root            SDK update checks are disabled.

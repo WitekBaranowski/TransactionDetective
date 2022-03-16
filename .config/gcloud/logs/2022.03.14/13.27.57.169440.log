@@ -1,0 +1,21 @@
+2022-03-14 13:27:57,170 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-03-14 13:27:57,173 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'configure_docker']
+2022-03-14 13:27:57,176 DEBUG    root            Running [gcloud.auth.configure-docker] with arguments: [--quiet: "True", REGISTRIES: "us-central1-docker.pkg.dev"]
+2022-03-14 13:27:57,219 WARNING  root            Your config file at [/home/jupyter/.docker/config.json] contains these credential helper entries:
+
+{
+  "credHelpers": {
+    "gcr.io": "gcloud",
+    "us.gcr.io": "gcloud",
+    "eu.gcr.io": "gcloud",
+    "asia.gcr.io": "gcloud",
+    "staging-k8s.gcr.io": "gcloud",
+    "marketplace.gcr.io": "gcloud"
+  }
+}
+2022-03-14 13:27:57,220 INFO     ___FILE_ONLY___ Adding credentials for: us-central1-docker.pkg.dev
+
+2022-03-14 13:27:57,266 INFO     ___FILE_ONLY___ Docker configuration file updated.
+
+2022-03-14 13:27:57,267 INFO     root            Display format: "default"
+2022-03-14 13:27:57,268 DEBUG    root            SDK update checks are disabled.

@@ -1,0 +1,7 @@
+2022-03-14 14:01:11,629 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2022-03-14 14:01:11,634 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'get_value']
+2022-03-14 14:01:11,636 DEBUG    root            Running [gcloud.config.get-value] with arguments: [SECTION/PROPERTY: "project"]
+2022-03-14 14:01:11,637 INFO     root            Display format: "value(.)"
+2022-03-14 14:01:11,637 INFO     ___FILE_ONLY___ transaction-detective22-1559
+
+2022-03-14 14:01:11,638 DEBUG    root            SDK update checks are disabled.

@@ -1,0 +1,5 @@
+export PROJ=fraudfinderdemo
+export APP=ff-web
+export REGION=us-central1
+export TAG="gcr.io/$PROJ/$APP"
+export PORT=`gcloud config list --format 'value(core.project)' 2>/dev/null`

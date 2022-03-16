@@ -1,0 +1,6 @@
+[core]
+project = transaction-detective22-1559
+
+[ai]
+region = us-central1
+

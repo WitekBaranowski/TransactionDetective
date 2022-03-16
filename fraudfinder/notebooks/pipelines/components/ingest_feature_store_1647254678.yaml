@@ -1,0 +1,61 @@
+name: Ingest features gcs
+inputs:
+- {name: project_id, type: String}
+- {name: region, type: String}
+- {name: bucket_name, type: String}
+- {name: feature_store_id, type: String}
+- {name: read_instances_uri, type: String}
+outputs:
+- {name: snapshot_uri_paths, type: String}
+implementation:
+  container:
+    image: python:3.7
+    command:
+    - sh
+    - -c
+    - (python3 -m ensurepip || python3 -m ensurepip --user) && (PIP_DISABLE_PIP_VERSION_CHECK=1
+      python3 -m pip install --quiet                 --no-warn-script-location 'git+https://github.com/googleapis/python-aiplatform.git@main'
+      'kfp==1.8.2' || PIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet                 --no-warn-script-location
+      'git+https://github.com/googleapis/python-aiplatform.git@main' 'kfp==1.8.2'
+      --user) && "$0" "$@"
+    - sh
+    - -ec
+    - |
+      program_path=$(mktemp -d)
+      printf "%s" "$0" > "$program_path/ephemeral_component.py"
+      python3 -m kfp.v2.components.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+    - "\nfrom kfp.v2.dsl import *\nfrom typing import *\n\ndef ingest_features_gcs(project_id:str,\
+      \ region:str, bucket_name:str,\n                       feature_store_id: str,\
+      \ read_instances_uri:str) -> NamedTuple(\"Outputs\",\n                     \
+      \                                                  [(\"snapshot_uri_paths\"\
+      , str),],):\n\n    # Libraries --------------------------------------------------------------------------------------------------------------------------\n\
+      \    from datetime import datetime\n    import glob\n    import urllib\n   \
+      \ import json\n\n    #Feature Store\n    from google.cloud.aiplatform import\
+      \ Featurestore, EntityType, Feature\n\n    # Variables --------------------------------------------------------------------------------------------------------------------------\n\
+      \    timestamp = datetime.now().strftime(\"%Y%m%d%H%M%S\")\n    api_endpoint\
+      \ = region + \"-aiplatform.googleapis.com\"\n    bucket = urllib.parse.urlsplit(bucket_name).netloc\n\
+      \    export_uri = f'{bucket_name}/data/snapshots/{timestamp}' #format as new\
+      \ gsfuse requires\n    export_uri_path = f'/gcs/{bucket}/data/snapshots/{timestamp}'\
+      \ \n    event_entity = 'event'\n    customer_entity = 'customer'\n    terminal_entity\
+      \ = 'terminal'\n    serving_feature_ids = {customer_entity: ['*'], event_entity:\
+      \ ['*'], terminal_entity: ['*']}\n\n    # Main -------------------------------------------------------------------------------------------------------------------------------\n\
+      \n    ## Set a client for Feature store managment\n\n    ### Create admin_client\
+      \ for create, read, update and delete (CRUD)\n    feature_store_resource_path\
+      \ = f\"projects/{project_id}/locations/{region}/featurestores/{feature_store_id}\"\
+      \n    print(\"Feature Store: \\t\", feature_store_resource_path)\n\n    ## Run\
+      \ batch job request\n    try:\n        ff_feature_store = Featurestore(feature_store_resource_path)\n\
+      \        ff_feature_store.batch_serve_to_gcs(\n            gcs_destination_output_uri_prefix\
+      \ = export_uri,\n            gcs_destination_type = 'csv',\n            serving_feature_ids\
+      \ = serving_feature_ids,\n            read_instances_uri = read_instances_uri\n\
+      \        )\n    except Exception as error:\n        print(error)\n\n    #Store\
+      \ metadata\n    snapshot_pattern = f'{export_uri_path}/*.csv'\n    snapshot_files\
+      \ = glob.glob(snapshot_pattern)\n    snapshot_files_fmt = [p.replace('/gcs/',\
+      \ 'gs://') for p in snapshot_files]\n    snapshot_files_string = json.dumps(snapshot_files_fmt)\n\
+      \n    component_outputs = NamedTuple(\"Outputs\",\n                        \
+      \        [(\"snapshot_uri_paths\", str),],)\n\n    return component_outputs(snapshot_files_string)\n\
+      \n"
+    args:
+    - --executor_input
+    - {executorInput: null}
+    - --function_to_execute
+    - ingest_features_gcs
